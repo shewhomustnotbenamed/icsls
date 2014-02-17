@@ -78,6 +78,7 @@
 
 #content
 {
+  overflow:auto;
 	width:97.5em;
 }
 /*start of left*/
@@ -183,4 +184,13 @@ width:70em;
 	left:-0.3em;
 	background-color:RGB(0,73,112);
 	color:white;
+}
+
+#content{
+  clear:both;
+}
+
+/*  Overriding form-inline from bootstrap */
+.form-inline{
+  padding-left:1em;
 }

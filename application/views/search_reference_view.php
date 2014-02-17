@@ -1,15 +1,9 @@
-<?= $this->load->view('includes/header_librarian_login') ?>
+<?= $this->load->view('includes/header') ?>
 	
 
 
 	<!-- Form Searching References -->
     
-
-
-
-
-
-
 <br>
 <br>
 
@@ -19,11 +13,11 @@
 
     <form action = "<?= base_url() . 'index.php/librarian/display_search_results' ?>" method = 'GET'>
       <select  class="dropdown"name = 'selectCategory'>
-        <option value = 'title'>Title</option>
-        <option value = 'author'>Author</option>
-        <option value = 'isbn'>ISBN</option>
-        <option value = 'course_code'>Course Code</option>
-        <option value = 'publisher'>Publisher</option>
+       <option value = 'title' <?php echo ($this->input->get('selectCategory') == 'title') ? "selected" : ""; ?>>Title</option>
+       <option value = 'author' <?php echo ($this->input->get('selectCategory') == 'author') ? "selected" : ""; ?>>Author</option>
+       <option value = 'isbn' <?php echo ($this->input->get('selectCategory') == 'isbn') ? "selected" : ""; ?>>ISBN</option>
+       <option value = 'course_code' <?php echo ($this->input->get('selectCategory') == 'course_code') ? "selected" : ""; ?>>Course Code</option>
+       <option value = 'publisher' <?php echo ($this->input->get('selectCategory') == 'publisher') ? "selected" : ""; ?>>Publisher</option>
       </select>
       
       <input type = 'text' name = 'inputText' pattern = '.{1,}' value = '<?= $this->input->get('inputText') ?>'/>
@@ -43,25 +37,25 @@
             <div class="modal-body">
                 <br />
                    <label for = 'likeRadio'>Like</label>
-                   <input type = 'radio' id = 'likeRadio' name = 'radioMatch' value = 'like' checked = 'checked' />
+                   <input type = 'radio' id = 'likeRadio' name = 'radioMatch' value = 'like' <?php echo ($this->input->get('radioMatch') != 'match') ? "checked" : ""; ?> />
                    <label for = 'matchRadio'>Exact Match</label>
-                  <input type = 'radio' id = 'matchRadio' name = 'radioMatch' value = 'match' />
+                  <input type = 'radio' id = 'matchRadio' name = 'radioMatch' value = 'match' <?php echo ($this->input->get('radioMatch') == 'match') ? "checked" : ""; ?> />
                   <br />
 
               <label><strong>Sort By:</strong></label>
       <label for = 'selectSortCategory'>Category:</label>
       <select id = 'selectSortCategory' name = 'selectSortCategory'>
-        <option value = 'title'>Title</option>
-        <option value = 'author'>Author</option>
-        <option value = 'category'>Reference Type</option>
-        <option value = 'course_code'>Course Code</option>
-        <option value = 'times_borrowed'>Number of times borrowed</option>
-        <option value = 'total_stock'>Total stock</option>
+        <option value = 'title' <?php echo ($this->input->get('selectSortCategory') == 'title') ? "selected" : ""; ?>>Title</option>
+        <option value = 'author' <?php echo ($this->input->get('selectSortCategory') == 'author') ? "selected" : ""; ?>>Author</option>
+        <option value = 'category' <?php echo ($this->input->get('selectSortCategory') == 'category') ? "selected" : ""; ?>>Reference Type</option>
+        <option value = 'course_code' <?php echo ($this->input->get('selectSortCategory') == 'course_code') ? "selected" : ""; ?>>Course Code</option>
+        <option value = 'times_borrowed' <?php echo ($this->input->get('selectSortCategory') == 'times_borrowed') ? "selected" : ""; ?>>Number of times borrowed</option>
+        <option value = 'total_stock' <?php echo ($this->input->get('selectSortCategory') == 'total_stock') ? "selected" : ""; ?>>Total stock</option>
       </select>
       <label for = 'selectOrderBy'>Order:</label>
       <select id = 'selectOrderBy' name = 'selectOrderBy'>
-        <option value = 'ASC'>Ascending</option>
-        <option value = 'DESC'>Descending</option>
+        <option value = 'ASC' <?php echo ($this->input->get('selectOrderBy') == 'ASC') ? "selected" : ""; ?>>Ascending</option>
+        <option value = 'DESC' <?php echo ($this->input->get('selectOrderBy') == 'DESC') ? "selected" : ""; ?>>Descending</option>
       </select>
 
       <br />
@@ -69,25 +63,25 @@
       <br />
       <label for = 'selectAccessType'>Access Type: </label>
       <select id = 'selectAccessType' name = 'selectAccessType'>
-        <option value = 'N'></option>
-        <option value = 'F'>Faculty</option>
-        <option value = 'S'>Student</option>
+        <option value = 'N' <?php echo ($this->input->get('selectAccessType') == 'N') ? "selected" : ""; ?>></option>
+        <option value = 'F' <?php echo ($this->input->get('selectAccessType') == 'F') ? "selected" : ""; ?>>Faculty</option>
+        <option value = 'S' <?php echo ($this->input->get('selectAccessType') == 'S') ? "selected" : ""; ?>>Student</option>
       </select>
       <br />
       <label for = 'del'>Status</label>
       <select id = 'del' name = 'checkDeletion'>
-        <option value = 'N'></option>
-        <option value = 'T'>To be Removed</option>
-        <option value = 'F'>Available</option>
+        <option value = 'N' <?php echo ($this->input->get('checkDeletion') == 'N') ? "selected" : ""; ?>></option>
+        <option value = 'T' <?php echo ($this->input->get('checkDeletion') == 'T') ? "selected" : ""; ?>>To be Removed</option>
+        <option value = 'F' <?php echo ($this->input->get('checkDeletion') == 'F') ? "selected" : ""; ?>>Available</option>
       </select>
 
       <br />
       <label for = 'selectRows'>Rows per page</label>
       <select id  = 'selectRows' name = 'selectRows'>
-        <option value = '10'>10</option>
-        <option value = '20'>20</option>
-        <option value = '50'>50</option>
-        <option value = '100'>100</option>
+        <option value = '10' <?php echo ($this->input->get('selectRows') == '10') ? "selected" : ""; ?>>10</option>
+        <option value = '20' <?php echo ($this->input->get('selectRows') == '20') ? "selected" : ""; ?>>20</option>
+        <option value = '50' <?php echo ($this->input->get('selectRows') == '50') ? "selected" : ""; ?>>50</option>
+        <option value = '100' <?php echo ($this->input->get('selectRows') == '100') ? "selected" : ""; ?>>100</option>
       </select>
       <br />
               <div class="modal-footer">
@@ -110,10 +104,13 @@
 		<!-- Form for displaying, deleting, and viewing searched references -->
 		<?php if(isset($references) && $numResults > 0){ ?>
 			<form name = "forms" action = "<?= base_url() . 'index.php/librarian/delete_reference/' ?>" method = "POST">
-				<button type = "button" id = "markAll" value = "markAll">Mark All</button>
-				<input type = "submit" value = "Delete Selected" onclick = "return confirmDelete()" />
+			<div id="buttons_search">
+				<button type = "button" class="btn btn-success"  id = "markAll" value = "markAll">Mark All</button>
+				<input type = "submit" class="btn btn-success" value = "Delete Selected" onclick = "return confirmDelete()" />
+				<input type = "submit" class="btn btn-success" value = "Edit Selected" formaction="<?= base_url() . 'index.php/librarian/edit_reference_index/' ?>" />
 				<br />
-				<center><?= $this->pagination->create_links() ?></center>
+			</div>
+				<div id="paginationStyle"><?= $this->pagination->create_links() ?></div>
 				<table id = 'booktable' border = "1" cellpadding = "5" cellspacing = "2">
 					<thead>
 						<tr>
@@ -181,7 +178,7 @@
 				</table>
 				
       				
-				<center><?= $this->pagination->create_links() ?></center>
+				<div id="paginationStyle"><?= $this->pagination->create_links() ?></div>
 			
 			
 				<?= 'Number of rows retrieved: ' . $total_rows ?>

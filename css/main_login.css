@@ -387,8 +387,12 @@ border-top-color:#ffffff;
 
 }
 #search_top{
-  margin-top:3.5em;
+  margin-top:0.5em;
 }
+#buttons_search{
+  margin-left: 8em;
+}
+
 
 #buttonslib{
 
@@ -406,4 +410,10 @@ border-top-color:#ffffff;
 	left:-0.3em;
 	background-color:RGB(0,73,112);
 	color:white;
+}
+#booktable{
+  margin-left: 12em;
+}
+#paginationStyle{
+  margin-left: 7em;
 }

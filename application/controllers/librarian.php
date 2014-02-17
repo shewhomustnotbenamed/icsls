@@ -16,7 +16,7 @@ class Librarian extends CI_Controller{
 		parent::__construct();
 
 		//Redirect if user is not logged in or not a librarian
-		if(! $this->session->userdata('loggedIn') || $this->session->userdata('user_type') != 'L'){
+		if(! $this->session->userdata('loggedIn') || $this->session->userdata('userType') != 'L'){
 			redirect('login');
 		}
 

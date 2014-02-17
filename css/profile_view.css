@@ -1,0 +1,54 @@
+#profile_div{
+
+border-left: solid 1px lightgray;
+margin-left: 5em;
+width:49em;
+height:35em;
+float:left;
+}
+
+#profile_picture_div{
+margin-right: 1em;
+float:left;
+margin-top:2em;
+margin-left: 5em;
+margin-bottom: 5em;
+width:10em;
+height:10em;
+
+}
+
+#profile_books_carousel{
+	float:right;
+	width:24.5em;
+	height:20em;
+	margin-top:-30.5em;
+	margin-right:-19em;
+	background-color: #446791;
+	border: solid 1px gray;
+	box-shadow: .5em .5em 1em gray;
+}
+
+.profile_books_item{
+
+	text-align: center;
+	color:white;
+
+}
+
+.profile_books_item > ul {
+	font-size: 17px;
+	text-align: left;
+
+	/*list-style-type: none;*/
+}
+#prof_form{
+
+	width: 66.66666666666666%;
+}
+#prof_name{
+
+	margin-left: .5em;
+
+}
+

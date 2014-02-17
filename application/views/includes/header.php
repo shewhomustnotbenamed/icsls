@@ -20,7 +20,7 @@
   
         <link rel="stylesheet" type='text/css' href="<?php echo base_url('css/bootstrap-theme.min.css');?>">
         <link rel="stylesheet" type='text/css'href="<?php echo base_url('css/bootstrap.css');?>">
-       <link rel="stylesheet" type='text/css'href="<?php echo base_url('css/main.css');?>">
+       <link rel="stylesheet" type='text/css'href="<?php echo base_url('css/main_login.css');?>">
         <link rel="stylesheet" type='text/css'href="<?php echo base_url('css/template.css');?>">
 
         <script src="<?base_url().'js/vendor/modernizr-2.6.2-respond-1.1.0.min.js'?>"></script>
@@ -30,6 +30,7 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experiensce.</p>
         <![endif]-->
+    <div id="wholeSite">
     <div class="navbar-fixed-top" id="test2">
       <div class="container">
         <div class="navbar-header" id="nav-bar">
@@ -47,7 +48,7 @@
        <div class="navbar-collapse collapse">
             <ul class="nav nav-pills">
               <li class="active">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> name_of_admin <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <?=$this->session->userdata('username')?> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><?=anchor('administrator/view_user_profile/'.$this->session->userdata('id'), 'View Profile')?></li>
                   <li><?=anchor('administrator/search_accounts', 'Search Accounts')?></li>
@@ -67,19 +68,17 @@
           <div class="navbar-collapse collapse">
             <ul class="nav nav-pills">
               <li class="active">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> name_of_librarian <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <?=$this->session->userdata('username')?> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">View Profile</a></li>
-                  <li><a href="#">View Student/Faculty</a></li>
                    <li><a href="<?=base_url().'index.php/librarian/search_reference_index'?>">Search References</a></li>
                    <li class="dropdown-submenu">
                     <a tabindex="-1" href="#">Add Reference</a>
                         <ul class="dropdown-menu">
-                             <li> <a href="<?= site_url('librarian/add_reference') ?>">Add Reference</a></li>
+                             <li> <a href="<?= site_url('librarian/add_reference') ?>">View Add Reference Form</a></li>
                              <li><a href="<?= site_url('librarian/file_upload') ?>">File Upload</a></li>
                         </ul>
                     </li>
-                  <li><a href="<?=base_url().'index.php/librarian/add_reference_index'?>">Add Reference</a></li>
                   <li><a href="<?=base_url().'index.php/librarian/view_report_index'?>">Generate Report</a></li>
                   <li><a href="<?=base_url().'index.php/logout'?>">Logout</a></li>
                 </ul>

@@ -414,7 +414,7 @@ class User_model extends CI_Model{
 			$this->db->select('profile_picture')
 			->from('users')
 			->where('username',$username);
-			//$currentImage = $this->db->get()->result()[0]->profile_picture;
+			$currentImage = $this->db->get()->result()[0]->profile_picture;
 
 			if($currentImage != $defaultImage){
 				unlink($currentImage);
