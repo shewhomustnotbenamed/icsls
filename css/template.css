@@ -1,0 +1,56 @@
+#content
+{
+	width:97.5em;
+}
+
+#nav-bar
+{
+	width:100%;
+}
+
+#nav-in
+{
+	position:relative;
+	top:15px;
+	float:right;
+}
+
+#test2{
+	height:5.8em;
+	border-bottom:5px solid RGB(0,73,112);
+	width:90em;
+	margin:auto;
+}
+
+#test{
+	height:4.8em;
+	padding:15px;
+	border-top:5px solid RGB(0,73,112);
+	width:90em;
+	margin:auto;
+}
+
+@media (max-height: 600px) 
+{
+	#content{
+		height:42em;
+	}
+	
+	#test
+	{
+		position: relative;
+		top:2em;
+		margin-top:-5em;
+	}
+	
+	#test2{
+		position:absolute;
+		
+	}
+	
+	#test, #test2
+	{
+		margin-left:6%;
+	}
+
+}
