@@ -139,12 +139,21 @@
 						</div>
 						<div class="item">
 							<div class = "profile_books_item">
-								<h1>Waitlisted books:</h1><br>
+								<?php if($query_user->user_type=='S' || $query_user->user_type=='F' ) { //if user is student?>
+		            					<h1>Waitlisted books:</h1><br>
 								<ul>
 									<li>Special Problem 2</li><br>
 									<li>Module Testing Reference 3</li><br>
 									<li>C language</li>
 								</ul>
+									</ul>
+									<?php }else {?>
+										<h1>Waitlisted books:</h1><br>
+											<ul>
+										<li>Empty</li><br>
+									</ul>
+									<?php } ?>
+								
 							</div>
 													
 						</div>

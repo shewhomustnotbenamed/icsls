@@ -302,11 +302,15 @@ class Librarian extends CI_Controller{
 	*/
 	public function add_reference(){
 		$data['title'] = 'Librarian Add Reference - ICS Library System';
-		$this->load->view("addReference_view", $data);
+		$data['message']= '';
+		
 
 		if($this->input->post('submit')) {
 		    $this->librarian_model->add_data();
-		    redirect('librarian/add_reference_index','refresh');
+		    $data['message']= 'You have successfully added a reference material';
+		   $this->load->view("addReference_view", $data);
+		}else{
+			$this->load->view("addReference_view", $data);
 		}
 	}//end of function add_reference
 

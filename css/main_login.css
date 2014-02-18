@@ -174,11 +174,12 @@ width:70em;
 }
 #edit_account{
   margin-top: 1.5em;
-  margin-left: 25em;
+  margin-left: 30em;
 
 }
 #submitref{
-  margin-left: 17em;
+  margin-top: 1em;
+  margin-left: 8em;
 
 }
 /*USER-DEFINED*/
@@ -390,10 +391,14 @@ border-top-color:#ffffff;
   margin-top:0.5em;
 }
 #buttons_search{
-  margin-left: 8em;
+  margin-left: 10em;
 }
 
+#addReferenceForm{
 
+  margin-left: 27em;
+  width: 45em;
+}
 #buttonslib{
 
   margin-left: 36%;
@@ -415,5 +420,78 @@ border-top-color:#ffffff;
   margin-left: 12em;
 }
 #paginationStyle{
-  margin-left: 7em;
+  margin-left: 20em;
+}
+#button_ref{
+  margin-top: 0.5em;
+  margin-left: 15em;
+
+}
+#back_button{
+  margin-top: -4em;
+  margin-left: 21em;
+}
+#back_button1{
+  margin-top: -8em;
+  margin-left: 43em;
+}
+h3{
+  margin-left: 23.5em;
+  margin-top: 1.5em;
+}
+#alertmessage:empty {
+    display: none;
+ 
+}
+#fileUploadForm{
+  margin-left: 34em;
+  margin-top: 2em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  border-color: black;
+   background-color: #dff0d8;
+   width:25em;
+   padding: 2em;
+}
+#view_report{
+  margin-left: 34em;
+  margin-top: 2em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+ 
+   background-color: #dff0d8;
+   width:25em;
+   padding: 2em;
+}
+
+#buttonsReport{
+  margin-left: 2em;
+}
+#search_container{
+  margin-top: 3em;
+}
+
+#category_option_container{
+  margin-top: 0.5em;
+}
+#buttonsAdmin{
+  margin-top: -2.3em;
+  margin-left: 16em;
+}
+#admin_results{
+  margin-left: 0em;
+}
+#search_result_container{
+  margin-left: 15em;
+}
+#viewResults{
+  margin-top: 2em;
+  margin-left: 30em;
+}
+#edit_profile_button{
+  margin-left: 40em;
+  margin-top: 5em;
+}
+#alertmessage1{
+  text-align: center;
 }

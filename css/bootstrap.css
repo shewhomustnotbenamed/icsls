@@ -5024,6 +5024,7 @@ a.thumbnail:focus {
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
+
 }
 
 .alert h4 {
@@ -5059,6 +5060,10 @@ a.thumbnail:focus {
   color: #468847;
   background-color: #dff0d8;
   border-color: #d6e9c6;
+  width: 25em;
+  height: 2.5em;
+  margin-left: 34em;
+  margin-top: -1em;
 }
 
 .alert-success hr {

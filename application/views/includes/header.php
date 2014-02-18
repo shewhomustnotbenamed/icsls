@@ -50,7 +50,7 @@
               <li class="active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <?=$this->session->userdata('username')?> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><?=anchor('administrator/view_user_profile/'.$this->session->userdata('id'), 'View Profile')?></li>
+                  <li><a href="<?=base_url().'index.php/borrower/view_borrower_profile_index'?>">View Profile</a></li>
                   <li><?=anchor('administrator/search_accounts', 'Search Accounts')?></li>
                   <li><?=anchor('administrator/create_account', 'Add Account')?></li>
                   <li><?=anchor('logout', 'Logout')?></li>

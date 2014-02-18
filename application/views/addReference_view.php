@@ -1,51 +1,65 @@
 <?php $this->load->view('includes/header') ?>
-		<h3>Add a Reference</h3>
+     
+		<h3>Add References</h3>
+        <div id="alertmessage"class="alert alert-success"><?=$message?></a></div>
         <div id="addReferenceForm">
+            
             <?= form_open('librarian/add_reference/'); ?>
-                <label for="inputTitle">Title</label>
-                <input name="title" type="text" id="inputNum" required>
-                <br/>
-                <label for="inputAuthor">Author</label>
-                <input name="author" type="text" id="inputAuthor" required>
-                <br/>
-                <label for="inputISBN">ISBN</label>
-                <input name="isbn" type="text" id="inputISBN">
-                <br/>
-                <label for="inputCategory">Category</label>
-                <select name="category" id="inputCategory" required>
-                    <option value="B" selected>Book</option>
-                    <option value="M">Magazine</option>
-                    <option value="T">Thesis</option>
-                    <option value="S">Special Problem</option>
-                    <option value="C">CD/DVD</option>
-                    <option value="J">Journal</option>
-                </select> 
-                <br/>
-                <label for="inputDesc">Description</label><br/> 
-                <textarea rows="4" cols="50" name="description" id="inputDesc"></textarea>
-                <br/>                               
-                <label for="inputPublisher">Publisher</label>
-                <input name="publisher" type="text" id="inputPublisher">
-                <br/>
-                <label for="inputyear">Publication Year</label>
-                <input type="number" name="year" id="inputYear" min="1900" max="2014">
-                <br/>
-                <label for="inputAccess">Access Type</label>
-                <select name="access_type" id="inputAccess" required>
-                    <option value="S" selected>Student</option>
-                    <option value="F">Faculty</option>
-                </select>
-                <br/>
-                <label for="inputCoursecode">Course Code</label>
-                <input name="course_code" type="text" id="inputCoursecode" required>
-                <br/>       
-                <label for="inputTotalSt">Total Stock</label>
-                <input type="number" name="total_stock" id="inputTotalSt" min="1" required>
-                <br/>  
-                <br/>
-                <br/>
-                <input type="submit" name="submit" value="Submit">                  
+            <table class="col-lg-9">
+                <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">Title</button></td>
+                        <td align="right"> <input name="title" class="form-control"type="text" id="inputNum" required> </td>
+                </tr>
+                <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">Author</button></td>
+                        <td align="right"> <input name="author" class="form-control"type="text" id="inputAuthor" required> </td>
+                </tr>
+               <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">ISBN</button></td>
+                        <td align="right"> <input name="isbn" class="form-control"type="text" id="inputISBN" > </td>
+                </tr>
+                <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">Category</button></td>
+                        <td align="right"> <select class="form-control"name="category" id="inputCategory" required>
+                            <option value="B" selected>Book</option>
+                            <option value="M">Magazine</option>
+                            <option value="T">Thesis</option>
+                             <option value="S">Special Problem</option>
+                        <option value="C">CD/DVD</option>
+                        <option value="J">Journal</option>
+                </select>  </td>
+                </tr>
+               <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">Description</button></td>
+                        <td align="right"> <textarea name="description"  row="4" cols="50" class="form-control" id="inputDesc" > </textarea></td>
+                </tr>
+                
+                <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">Publisher</button></td>
+                        <td align="right"> <input name="publisher" class="form-control"type="text" id="inputPublisher" > </td>
+                </tr>                             
+               <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">Publication Year</button></td>
+                        <td align="right"> <input name="year" class="form-control"type="number"min="1900" max="2014" id="inputYear" > </td>
+                </tr>
+                <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">Access Type</button></td>
+                        <td align="right"> <input name="access_type" class="form-control"type="text" id="inputAccess" > </td>
+                </tr>
+               <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">Course Code</button></td>
+                        <td align="right"> <input name="course_code" class="form-control"type="text" id="inputCoursecode" > </td>
+                </tr>
+                 <tr>
+                        <td align="right"><button type="button" class="btn btn-primary">Total Stock</button></td>
+                        <td align="right"> <input name="total_stock" class="form-control"type="text" id="inputTotalSt" min="1" required > </td>
+                </tr>
+                
+            </table>
+             <input id="button_ref" class="btn btn-success"type="submit"name="submit" value="Submit">              
             <?= form_close(); ?>
-            <a href="<?= site_url('librarian/index') ?>">Back</a>
+           <td><a href="<?= site_url('librarian/index') ?>"><button class="btn btn-danger" id="back_button">Back</button></a>
+           
         </div>
+
 <?php $this->load->view('includes/footer') ?>

@@ -7,9 +7,9 @@
 				<br/>
 				<input type="file" name="csvfile" value="" placeholder="" required>
 				<br/> 
-				<input type="submit" value="Upload" name="upload">
+				<input type="submit" class="btn btn-primary" value="Upload" name="upload">
 			<?= form_close(); ?>
         </div>
-		<a href="<?= site_url('librarian/index') ?>">Back</a>
+		<a href="<?= site_url('librarian/index') ?>"><button class="btn btn-danger" id="back_button1">Back</button></a>
 	</div>
 <?php $this->load->view('includes/footer'); ?>
