@@ -1,3 +1,4 @@
+ /*
  * Bootstrap v3.0.0
  *
  * Copyright 2013 Twitter, Inc
@@ -48,6 +49,7 @@ html {
 
 body {
   margin: 0;
+  height: 100%;
 }
 
 a:focus {
@@ -3330,6 +3332,7 @@ input[type="button"].btn-block {
   border-top: 0 dotted;
   border-bottom: 4px solid #000000;
   content: "";
+
 }
 
 .dropup .dropdown-menu,
@@ -4161,7 +4164,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   right: 0;
   left: 0;
   border-width: 0 0 1px;
-  clear:both;
+ 
 }
 
 @media (min-width: 768px) {
@@ -6846,3 +6849,5 @@ td.visible-print {
     display: none !important;
   }
 }
+
+

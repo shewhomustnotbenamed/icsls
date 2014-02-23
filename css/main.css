@@ -83,12 +83,12 @@
 }
 /*start of left*/
 
-#left
+#left1
 {
 	float:left;
 	width:70em;
 }
-#carou
+#carou1
 {
 	width:70em;
 	position:relative;
@@ -97,7 +97,7 @@
 	float:left;
 }
 
-#img-car
+#img-car1
 {
 	height: 20em;
 }
@@ -123,24 +123,24 @@ text-decoration:none;
 opacity:0.8;
 }
 
-#ics
+#ics1
 {
 background-image:url('../img/ics.jpg');
 background-repeat:no-repeat;
 }
 
-#uplb
+#uplb1
 {
 background-image:url('../img/uplb.jpg');
 background-repeat:no-repeat;
 }
 
-#add
+#add1
 {
 background-image:url('../img/6.jpg');
 }
 
-.link-gr
+.link-gr1
 {
 position:relative;
 left:5.7em;
@@ -152,7 +152,7 @@ width:70em;
 /*end of left*/
 
 /*start of right*/
-#right
+#right1
 {
 	width:250px;
 	float:right;
@@ -166,7 +166,7 @@ width:70em;
 	right:50px;
 }
 
-#announ
+#announ1
 {
 	position:relative;
 	top:50px;
