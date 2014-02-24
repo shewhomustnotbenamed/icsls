@@ -251,14 +251,26 @@ border-top-color:#ffffff;
 }
 
 #booktable{
-  margin-left: 12em;
+  margin-left: 6em;
+  width: 80em;
 }
 #booktable1{
   margin-left: 16em;
   margin: auto;
+  width:80%;
+
+}
+
+#booktable1 th{
+
+  text-align: center;
 }
 #paginationStyle{
   margin-left: 20em;
+
+}
+#paginationStyle table{
+z-index: -99;
 }
 #button_ref{
   margin-top: 0.5em;
@@ -397,4 +409,11 @@ margin-left: 14em;
 #add_acc{
   margin-top: 5em;
   margin-left: 30em;
+}
+
+#fetched {
+
+  margin-left: 8em;
+  color: #989898;
+  font-weight: bold;
 }

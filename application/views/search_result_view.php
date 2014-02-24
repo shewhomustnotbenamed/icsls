@@ -108,7 +108,7 @@
 				echo $this->pagination->create_links();
 				if(!empty($rows)){
 				?> </div>
-				<table id = 'booktable1' border = "1" cellpadding = "5" cellspacing = "2">
+				<table id = 'booktable1' class="table table-hover">
 					<thead>
 						<tr>
 							

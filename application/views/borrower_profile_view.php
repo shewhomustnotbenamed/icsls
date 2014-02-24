@@ -1,3 +1,4 @@
+<body>
 <head>
 
 </head>
@@ -38,13 +39,13 @@
 		</script>
 <div id="content">
 	<div id="left">
-	<div class = "profile-description">
+	
 
 		<form action="<?=base_url()."index.php/borrower/save"?>" method="post" name="createForm"><!--Profile Form-->
 			<?=$save_message?> <!--Save Message-->
 			<?=$username_exist?><!--Username Message-->
 		<br/>
-
+		<div id="profile_fixed">
 			<div id ="profile_picture_div">
 				<img src="<?= base_url('img/download.jpg');?>" width="200" height="200">
 				<form action="<?=base_url()."index.php/borrower/change_profile_picture"?>" method="post" accept-charset="utf-8" enctype="multipart/form-data"><!--Profile Form-->
@@ -121,10 +122,12 @@
 		            </form>
 		            </tr>
 		     	</table>  		
-			</div>  <!--END OF PROFILE DIV--> 
+			</div>  <!--END OF PROFILE DIV-->
+			</div> <!--END OF PROFILE-FIXED-->
+			<div id="outer_carousel">
 			<div id ="profile_books_carousel">
 				<div id="this-carousel-id" class="carousel slide">
-					<div class="carousel-inner" id="img-car">
+					<div class="carousel-inner" >
 						<div class = "item active">
 							<div class = "profile_books_item">
 									<?php if($query_user->user_type=='S' || $query_user->user_type=='F' ) { //if user is student?>
@@ -203,11 +206,12 @@
 					<a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
 				</div><!-- .carousel -->
 			</div>
+
 	</form>
-	</div> <!--End of profile description-->	
+	</div> <!--End outer carou-->	
 
 	</div> <!--End of left div-->	
 </div> <!--End of content div-->
-
+</body>
 <?php $this->load->view('includes/footer'); ?>
 

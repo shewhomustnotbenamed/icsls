@@ -98,14 +98,14 @@
     <!-- Display table for references already for deletion (complete stock) -->
 
     <!-- END -->
- 
+ 		<div id="fetched"><?= 'Number of rows retrieved: ' . $total_rows ?></div>
 		<!-- Display table for references not ready or not scheduled for deletion -->
 		<table id = 'booktable' border = '1'></table>
 		<!-- Form for displaying, deleting, and viewing searched references -->
 		<?php if(isset($references) && $numResults > 0){ ?>
 			<form name = "forms" action = "<?= base_url() . 'index.php/librarian/delete_reference/' ?>" method = "POST">
 				<div id="paginationStyle"><?= $this->pagination->create_links() ?></div>
-				<table id = 'booktable' border = "1" cellpadding = "5" cellspacing = "2">
+				<table id = 'booktable' class ="table table-hover">
 					<thead>
 						<tr>
 							<th><button type = "button" class="btn btn-primary"  id = "markAll" value = "markAll" formaction="<?= base_url() . 'index.php/librarian/claim_return/' ?>" /><span class="glyphicon glyphicon-check"></span></button>
@@ -178,7 +178,7 @@
 				<div id="paginationStyle"><?= $this->pagination->create_links() ?></div>
 			
 			
-				<?= 'Number of rows retrieved: ' . $total_rows ?>
+				
 				
 			</form>
 		<?php } ?>
