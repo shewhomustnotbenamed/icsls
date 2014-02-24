@@ -36,7 +36,8 @@
     <div id="wholeSite">
     <div class="navbar navbar-default navbar-fixed-top" id="top-bar">
         <div class="navbar-header" id="nav-bar">
-          <a class="navbar-brand" href="#"><img src="<?php echo base_url('logo.png');?>" width="150" height="45" id="logo"></a>
+          <a class="navbar-brand" href="#"><span id="logo">SILID-AKLATANni</span><span id="logo1">JEFFERSON</span></a>
+          <!--<a class="navbar-brand" href="#"><span id="logo">ICS</span><span id="logo1">OnLib</span></a>-->
 		  
           <?php if($this->session->userdata('userType') == 'A'){ ?>
           <!---start>
