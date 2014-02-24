@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="<?php echo base_url();?>'css/bootstrap.min.css">
+        <link rel="stylesheet" type='text/css' href="<?php echo base_url('css/bootstrap.min.css');?>">
         <style>
             body {
                 padding-top: 50px;
@@ -19,13 +19,14 @@
         </style>
   
         <link rel="stylesheet" type='text/css' href="<?php echo base_url('css/bootstrap-theme.min.css');?>">
-        <link rel="stylesheet" type='text/css'href="<?php echo base_url('css/bootstrap.css');?>">
+        <link rel="stylesheet" type='text/css' href="<?php echo base_url('css/bootstrap.css');?>">
        
-       <link rel="stylesheet" type='text/css'href="<?php echo base_url('css/main.css');?>">
-       <link rel="stylesheet" type='text/css'href="<?php echo base_url('css/main_login.css');?>">
-        <link rel="stylesheet" type='text/css'href="<?php echo base_url('css/template.css');?>">
-        <link rel="stylesheet" type='text/css'href="<?php echo base_url('css/profile_view.css');?>">
-        <script src="<?base_url().'js/vendor/modernizr-2.6.2-respond-1.1.0.min.js'?>"></script>
+       <link rel="stylesheet" type='text/css' href="<?php echo base_url('css/main.css');?>">
+       <link rel="stylesheet" type='text/css' href="<?php echo base_url('css/main_login.css');?>">
+       <link rel="stylesheet" type='text/css' href="<?php echo base_url('css/profile_view.css');?>">
+        <link rel="stylesheet" type='text/css' href="<?php echo base_url('css/template.css');?>">
+		
+		<script src="<?base_url().'js/vendor/modernizr-2.6.2-respond-1.1.0.min.js'?>"></script>
        
     </head>
     <body>
@@ -33,21 +34,14 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experiensce.</p>
         <![endif]-->
     <div id="wholeSite">
-    <div class="navbar navbar-default navbar-fixed-top" id="topbar">
-      <div class="container">
+    <div class="navbar navbar-default navbar-fixed-top" id="top-bar">
         <div class="navbar-header" id="nav-bar">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="#"><img src="<?php echo base_url('logo.png');?>" width="150" height="45" id="logo"></a>
 		  
           <?php if($this->session->userdata('userType') == 'A'){ ?>
           <!---start>
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div id="nav-in">
-       <div class="navbar-collapse collapse">
+       <div class="navbar-collapse collapse" id="admin-header">
             <ul class="nav nav-pills">
               <li class="active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <?=$this->session->userdata('username')?> <b class="caret"></b></a>
@@ -61,13 +55,11 @@
             </ul>
           </div>    
         
-      </div>
           <?php }else if($this->session->userdata('userType') == 'L') { ?>
           <!---start>
           <!-- Collect the nav links, forms, and other content for toggling -->
-            <div id="nav-in">
         
-          <div class="navbar-collapse collapse">
+          <div class="navbar-collapse collapse" id="librarian-header">
             <ul class="nav nav-pills">
               <li class="active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <?=$this->session->userdata('username')?> <b class="caret"></b></a>
@@ -87,13 +79,11 @@
               </li>
             </ul>
           </div>     
-      </div>
       <?php }else if($this->session->userdata('userType') == 'S' || $this->session->userdata('userType') == 'F') { ?>
           <!---start>
           <!-- Collect the nav links, forms, and other content for toggling -->
-            <div id="nav-in">
         
-          <div class="navbar-collapse collapse">
+          <div class="navbar-collapse collapse" id="user-header">
             <ul class="nav nav-pills">
               <li class="active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=$this->session->userdata('username')?><b class="caret"></b></a>
@@ -106,26 +96,22 @@
               </li>
             </ul>
           </div>     
-      </div>
       <?php }else{ ?>
 		 <!---start>
 		  <!-- Collect the nav links, forms, and other content for toggling -->
-			<div id="nav-in">
-        <form class="navbar-form navbar-left nav-in-search" role="search"action="http://localhost/icsls/index.php/search/search_rm" method="get" accept-charset="utf-8">
-         <div class="form-group">
-          <input type="text" name="keyword" placeholder="Search" value=""/>
-           
-          <input class="btn btn-default"type="submit" name="search1" value="Search"/>
-        </form>
-		     <a href="#advanceSearch"data-toggle="modal"> <input type="submit" name="aSearch" class="btn btn-primary"  value="Advanced Search"/></a>
-       </div>
+		<div id="nav-in">
+	        <form class="navbar-form navbar-left nav-in-search" role="search"action="http://localhost/icsls/index.php/search/search_rm" method="get" accept-charset="utf-8">
+		        <div class="form-group">
+					<input type="text" class="form-control" name="keyword" placeholder="Search" value=""/>
+				</div>
+	        <input class="btn btn-default"type="submit" name="search1" value="Search"/>
+			<a href="#advanceSearch" data-toggle="modal"> <input type="submit" name="aSearch" class="btn btn-primary"  value="Advanced Search"/></a>
+	        </form>
 		    
- 
-
-        
-			</div>
+		</div>
+		
+		
         <?php } ?>
 		
         </div>
-      </div>
     </div>

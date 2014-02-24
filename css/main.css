@@ -63,43 +63,29 @@
 
 /*end - template*/
 
-#nav-bar
-{
-	width:100%;
-}
-
-#nav-in
-{
-	position:relative;
-	top:15px;
-	float:right;
-}
-
-
-#content
-{
-  overflow:auto;
-	width:97.5em;
-}
 /*start of left*/
 
 #left1
 {
 	float:left;
-	width:70em;
+	width:70%;
 }
 #carou1
 {
-	width:70em;
+	width:100%;
 	position:relative;
 	top:40px;
 	left:80px;
 	float:left;
+	overflow: hidden;
+	height:20em;
 }
 
 #img-car1
 {
-	height: 20em;
+	width:95em;
+		margin:-4em 0 0 -2em ;
+
 }
 
 
@@ -108,13 +94,12 @@
 display:block;
 font-weight:bold;
 color:#FFFFFF;
-width:22.5em;
+width:31.2%;
 position:relative;
-left: 1em;
-height:200px;
+left:0.5em;
+height:14.5em;
 float:left;
 text-align:center;
-margin-right:10px;
 padding:4px;
 text-decoration:none;
 }
@@ -123,16 +108,25 @@ text-decoration:none;
 opacity:0.8;
 }
 
+.title-link{
+	height:3em;
+	width:103%;
+	padding:10px;
+	position:relative;
+	top:-0.3em;
+	left:-0.3em;
+	background-color:RGB(0,73,112);
+	color:white;
+}
+
 #ics1
 {
 background-image:url('../img/ics.jpg');
-background-repeat:no-repeat;
 }
 
 #uplb1
 {
 background-image:url('../img/uplb.jpg');
-background-repeat:no-repeat;
 }
 
 #add1
@@ -140,13 +134,19 @@ background-repeat:no-repeat;
 background-image:url('../img/6.jpg');
 }
 
+#ics1, #uplb1, #add1{
+	background-repeat:no-repeat;
+	background-position:center; 
+	margin-left:0.5em;
+}
+
 .link-gr1
 {
 position:relative;
-left:5.7em;
+margin-left:4.7em;
 top:50px;
 float:left;
-width:70em;
+width:105%;
 }
 
 /*end of left*/
@@ -154,7 +154,7 @@ width:70em;
 /*start of right*/
 #right1
 {
-	width:250px;
+	width:28%;
 	float:right;
 }
 #signin
@@ -173,18 +173,6 @@ width:70em;
 
 }
 /*end of right*/
-
-
-.title-link{
-	height:3em;
-	width:22.5em;
-	padding:10px;
-	position:relative;
-	top:-0.3em;
-	left:-0.3em;
-	background-color:RGB(0,73,112);
-	color:white;
-}
 
 #content{
   clear:both;

@@ -9,22 +9,20 @@
             <div class="modal-body">
                 <form action="<?php echo base_url('index.php/search/advanced_search_reference'); ?>" method="get" accept-charset="utf-8">
         <table>
-          <tr>
-            <td align="right"><button class="btn btn-primary"><input value="title" type="checkbox" name="projection[]" checked="true">Title:</button></td>
-            <td align="right"><input type="text" class="form-control" name="title" size = "30" value="<?php if(isset($temparray) && in_array('title',$temparray)) echo $temparrayvalues[array_search('title', $temparray)]?>"><br/></td></tr>
-          <tr>
-          	<td align="right"><button class="btn btn-primary"><input value="author" type="checkbox" name="projection[]">Author:</button></td>
-          	<td align="right"><input type="text" name="author" size = "30" class="form-control"value="<?php if(isset($temparray) && in_array('author',$temparray)) echo $temparrayvalues[array_search('author', $temparray)]?>"><br/></td></tr>
-          <tr>
-          	<td align="right"><button class="btn btn-primary"><input value="year_published" type="checkbox" name="projection[]">Year Published:</button></td>
-          	<td align="right"><input type="text" name="year_published" class="form-control"size = "30" value="<?php if(isset($temparray) && in_array('year_published',$temparray)) echo $temparrayvalues[array_search('year_published', $temparray)]?>"><br/></td></tr>
-          <tr>
-          	  <td align="right"><button class="btn btn-primary"><input value="publisher" type="checkbox" name="projection[]">Publisher:</button></td>
-          	<td align="right"><input type="text" name="publisher" class="form-control"size = "30" value="<?php if(isset($temparray) && in_array('publisher',$temparray)) echo $temparrayvalues[array_search('publisher', $temparray)]?>"><br/></td></tr>
-          <tr>
-          	  <td align="right"><button class="btn btn-primary"><input value="course_code" type="checkbox" name="projection[]" >Subject:</button></td>
-          
-          	<td><input type="text" name="course_code"class="form-control" size = "30" value="<?php if(isset($temparray) && in_array('course_code',$temparray)) echo $temparrayvalues[array_search('course_code', $temparray)]?>"><br/></td></tr>    <tr>
+		<?php
+		
+		$i = array('Title:','Author:','Year Published:','Publisher:','Subject:');
+		$j = array('title','author','year_published','publisher','course_code',);
+		$m=null;
+		
+		for($k=0;$k<count($i);$k++){
+			if(isset($temparray) && in_array($j[$k],$temparray)) 
+				$m = $temparrayvalues[array_search($j[$k], $temparray)];
+		echo '<tr>';
+        echo   '<td align="right"><button class="btn btn-primary"><input value="title" type="checkbox" name="projection[]" checked="true">'.$i[$k].'</button></td>';
+        echo   '<td align="right"><input type="text" class="form-control" name="title" size = "30" value="'.$m.'"><br/></td></tr>';
+	}
+		?>
           <tr>
           	  <td align="right"><button class="btn btn-primary">Category:</button></td>
             <td align="right">
@@ -38,12 +36,12 @@
             </td>
           </tr>
             <tr>
-            <td align="left"><input type="radio" name="sort" value="sortalpha"checked="true" />Sort from A to Z</td>
-            <td align="left"><input type="radio" name="sort" value="sortbeta" />Sort from Z to A</td>
+            <td align="left"><input type="radio" name="sort" value="sortalpha"checked="true">Sort from A to Z</td>
+            <td align="left"><input type="radio" name="sort" value="sortbeta">Sort from Z to A</td>
           </tr> 
           <tr>
-            <td align="left"><input type="radio" name="sort" value="sortyear" />Sort by year</td>
-            <td align="left"><input type="radio" name="sort" value="sortauthor" />Sort by author(A-Z)</td>
+            <td align="left"><input type="radio" name="sort" value="sortyear">Sort by year</td>
+            <td align="left"><input type="radio" name="sort" value="sortauthor">Sort by author(A-Z)</td>
           </tr> 
         </table>
         
@@ -66,13 +64,13 @@
 				<div id="this-carousel-id" class="carousel slide">
 					<div class="carousel-inner" id="img-car1">
 						<div class = "item active">;
-							<a href = ""><img src = "<?php echo base_url('img/5.jpg'); ?>" alt="Image 1" /></a>;
+							<a href = ""><img src = "<?php echo base_url('img/1.jpg'); ?>" alt="Image 1" /></a>;
 							<div class = "carousel-caption">
 								<p></p>
 								<p><a href = "">&raquo;</a></p>
 							</div>
 						</div>
-						<?php for($i = 6; $i < 9; $i++){ ?>
+						<?php for($i = 2; $i < 5; $i++){ ?>
 							<div class="item">
 								<a href=""> <img src="<?php echo base_url("img/". $i .".jpg") ?>" alt="Image 1" /></a>
 								<div class="carousel-caption">
