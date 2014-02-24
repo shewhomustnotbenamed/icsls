@@ -18,11 +18,14 @@
 	<script src = "<?= base_url() . 'js/validate_script.js' ?>"></script>
     <script src = "<?= base_url() . 'js/script.js' ?>"></script>
     <script src = "<?= base_url() . 'js/bootstrap.min.js' ?>"></script>
-     <script src = "<?= base_url() . 'js/bootstrapjs' ?>"></script>
-       <script src="<?=base_url().'js/vendor/jquery-1.10.1.js'?>"></script>
-        <script src="<?=base_url().'js/vendor/bootstrap.min.js'?>"></script>
+    <script src = "<?= base_url() . 'js/bootstrapjs' ?>"></script>
+    <script src="<?=base_url().'js/vendor/jquery-1.10.1.js'?>"></script>
+    <script src="<?=base_url().'js/vendor/bootstrap.min.js'?>"></script>
 
         <script src="<?base_url().'js/main.js'?>"></script>
+        <script src="<?=base_url().'js/createAccount.js'?>"></script>
+        <script src="<?=base_url().'js/jquery-2.0.3.min.js'?>"></script>
+
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

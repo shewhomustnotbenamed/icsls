@@ -86,7 +86,7 @@ $(".typeDropdown").change(function() {
 		$(".degreeSet").hide();
 		$(".collegeSet").hide();
 		$("#enum").hide();
-		$("#employee_number").show();
+		$("#employee_number").hide();
 	}
 });
 
